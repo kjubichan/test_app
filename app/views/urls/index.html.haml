@@ -1,5 +1,5 @@
 %section#url-input.grid
-	= simple_form_for( Url.new ) do |f|
+	= simple_form_for( Url.build ) do |f|
 		.fieldset
 			= f.input :url
 			= f.button :submit

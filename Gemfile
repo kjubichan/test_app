@@ -47,6 +47,6 @@ gem 'unicorn'
 gem 'net-ssh', '~> 2.7.0'
 gem 'net-ssh-gateway', '~> 1.2.0'
 # Use Capistrano for deployment
-gem 'capistrano', group: :development
+gem 'capistrano', '~> 3.1.0', group: :development
 gem "capistrano-rails"
 gem 'capistrano-rbenv', '~> 2.0'

@@ -1,4 +1,4 @@
-lock '3.2.1'
+lock '3.1.0'
 
 set :application, 'test_project'
 set :deploy_user, 'deployer'
@@ -8,6 +8,10 @@ set :repo_url, "git@bitbucket.org:aizek/#{fetch( :application ) }.git"
 set :ssh_options, {
   forward_agent: true,
   port: 102
+}
+
+set :default_env {
+  'SECRET_KEY_BASE' => 'PATH=$PATH:/opt/rubies/ruby-2.1.1/bin'
 }
 
 # set :rbenv_type, :system
@@ -35,7 +39,7 @@ set :ssh_options, {
 set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml config/secrets.yml}
+set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}

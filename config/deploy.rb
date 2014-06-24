@@ -10,10 +10,6 @@ set :ssh_options, {
   port: 102
 }
 
-set :default_env {
-  'SECRET_KEY_BASE' => 'PATH=$PATH:/opt/rubies/ruby-2.1.1/bin'
-}
-
 # set :rbenv_type, :system
 # set :rbenv_ruby, '1.9.3-p429'
 # set :rbenv_path, "/home/deployer/.rbenv"

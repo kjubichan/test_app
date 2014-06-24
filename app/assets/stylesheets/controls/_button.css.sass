@@ -1,0 +1,21 @@
+.btn
+	display: inline-block
+	margin: 0
+	padding: .75em 1.25em
+	font: 400 16px/normal $font-family
+	color: #fff
+	text-decoration: none
+	text-align: center
+	background-color: #ccc
+	border: none
+	border-radius: 5px
+	cursor: pointer
+	+transition-property( background-color )
+	+transition-duration( 0.15s )
+	+transition-timing-function( ease-out )
+
+.btn-primary
+	color: $white
+	background-color: $theme-color
+	&:hover
+		background-color: darken($theme-color, 20%)

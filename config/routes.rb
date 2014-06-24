@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'urls#index'
   resources :urls
 
   # The priority is based upon order of creation: first created -> highest priority.

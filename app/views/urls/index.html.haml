@@ -1,5 +1,10 @@
 %section#url-input.grid
-	= simple_form_for( Url.build ) do |f|
-		.fieldset
-			= f.input :url
-			= f.button :submit
+	= simple_form_for( Url.new, defaults: { input_html: { class: 'text-input' } } ) do |f|
+		%fieldset.url-form
+			.vertical-divider
+				%h2 Website URL
+				= f.input :url, label: false
+				= f.submit class: "btn btn-primary"
+			.vertical-divider
+				%ul#url-container
+					= render partial: "single_url", collection: @urls
